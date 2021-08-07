@@ -1,0 +1,94 @@
+body,
+html {
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+  color: hsl(300, 43%, 22%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem;
+  text-align: center;
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem;
+  justify-content: center;
+}
+
+.ratings-container {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.ratings {
+  background-color: hsl(300, 24%, 96%);
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  padding: 3px;
+  margin-bottom: 1rem;
+}
+
+.reviews {
+  width: 100%;
+}
+
+.reviews-card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: hsl(300, 43%, 22%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+}
+
+.reviews-card-header {
+  display: flex;
+  align-items: flex-end;
+}
+
+.reviewer-name {
+  margin: 0.5rem 1rem;
+  font-weight: 700;
+}
+
+.reviewer-details,
+.reviewer-avatar {
+  margin: 2rem 0 1rem;
+  align-self: center;
+}
+
+.reviewer-title {
+  font-weight: 500;
+  color: hsl(333, 80%, 67%);
+  margin: 0.5rem 1rem;
+}
+
+.review-text {
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 4rem;
+}
+
+#header-para {
+  font-weight: 400;
+  font-size: 13px;
+}
