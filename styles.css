@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body,
 html {
   font-family: "Spartan", sans-serif;
@@ -14,10 +18,17 @@ html {
 
 .top {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   margin: 2rem;
   text-align: center;
+}
+
+.top-header {
+  flex-shrink: 0;
+  max-width: 100%;
+  max-width: 44rem;
 }
 
 .bottom {
@@ -28,12 +39,17 @@ html {
 }
 
 .ratings-container {
-  width: 100%;
-  margin: 2rem 0;
+  /* margin: 2rem 0; */
+  max-width: 44rem;
+  flex-shrink: 0;
+  flex-grow: 1;
 }
 
 .ratings {
+  display: flex;
+  flex-direction: column;
   background-color: hsl(300, 24%, 96%);
+  width: 100%;
   font-size: 0.75rem;
   font-weight: 700;
   border-radius: 0.5rem;
@@ -43,6 +59,10 @@ html {
 
 .reviews {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 44rem;
 }
 
 .reviews-card {
@@ -91,4 +111,64 @@ html {
 #header-para {
   font-weight: 400;
   font-size: 13px;
+}
+
+@media (min-width: 1200px) {
+  * {
+    box-sizing: border-box;
+  }
+  .top {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .top-header {
+    flex-shrink: 1;
+    flex-grow: 0;
+    font-size: 2rem;
+    width: 30rem;
+    text-align: left;
+  }
+
+  .ratings-container {
+    width: 80rem;
+    align-self: center;
+  }
+
+  .ratings {
+    flex-direction: row;
+    justify-content: flex-start;
+    max-width: 30rem;
+  }
+
+  .ratings:nth-child(2) {
+    margin-left: 2rem;
+  }
+
+  .ratings:last-child {
+    margin-left: 4rem;
+  }
+
+  .reviews-card:nth-child(2) {
+    margin: 1rem 0 -1rem;
+  }
+
+  .reviews-card:last-child {
+    margin: 2rem 0 -2rem;
+  }
+  #header-para {
+    line-height: 1.5;
+  }
+
+  .bottom {
+    margin: 2rem;
+  }
+
+  .reviews {
+    max-width: 100%;
+  }
+
+  .reviews-card {
+    max-width: 20rem;
+  }
 }
